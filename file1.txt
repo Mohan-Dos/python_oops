@@ -1,0 +1,59 @@
+1.use self() function:
+
+class main:
+    def __init__ (self,name,age):
+        self.name = name
+        self.age = age
+
+    def print_method(self):
+        print("the name is: ",self.name)
+        print("the age is: ",self.age)
+        print("course: ",self.course)
+        print("stay in: ",self.city) 
+
+class sub_class(main):
+    def __init__ (self,name,age,course,city):
+        super().__init__(name,age)
+        self.course = course
+        self.city = city
+
+    def get(self):
+        super().print_method()
+
+obj1 = sub_class("mohan",20,"python full stack","salem")
+obj1.get()
+print("\n")
+obj2 = sub_class("rohan",21,"java full stack","salem")
+obj2.get()
+print("\n")
+obj3 = sub_class("monisha",18,"data science","karrur")
+obj3.get()
+print("\n")
+obj4 = sub_class("mani",25,"electrical and electronics","chenai")
+obj4.get()
+
+O/P:
+
+the name is:  mohan
+the age is:  20
+course:  python full stack
+stay in:  salem
+
+
+the name is:  rohan
+the age is:  21
+course:  java full stack
+stay in:  salem
+
+
+the name is:  monisha
+the age is:  18
+course:  data science
+stay in:  karrur
+
+
+the name is:  mani
+the age is:  25
+course:  electrical and electronics
+stay in:  chenai
+
